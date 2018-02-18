@@ -378,12 +378,23 @@ SQL> ALTER TABLE movies
 
 Table MOVIES altered.
 
-SQL> remark inserts data into tables
-SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('20325', 'The Terminator', 'action', 'A robot is sent into the past to protect a child', '08-MAR-1983');
+SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('20325', 'The Mummy', 'action', 'An ancient Egyptian princess is awakened from her crypt beneath the desert, bringing with her malevolence grown over millennia, and terrors that defy human comprehension.', '13-NOV-2017');
+
+1 row inserted. 
+
+SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('67676', 'Matilda', 'drama', 'an exceptionally clever little girl, Matilda Wormwood, who has exceptionally horrible and ignorant parents. ', '28-JUL-1996');
 
 1 row inserted.
 
-SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('67676', 'Rocky', 'action', 'Is the will of one man enough to overcome great odds?', '12-MAR-1989');
+SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('87355', 'Hocus Pocus', 'drama', 'After three centuries, three witch sisters are resurrected in Salem, Massachusetts on Halloween night,', '16-JUL-1993');
+
+1 row inserted.
+
+SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53202', 'Jurassic Park', 'adventure', 'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.', '11-JUN-1993');
+
+1 row inserted.
+
+SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53235', 'Forrest Gump', 'drama', 'The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.', '06-JUL-1994');
 
 1 row inserted.
 
@@ -459,23 +470,23 @@ SQL> INSERT INTO movie_actors (movie_actor_id, role) VALUES ('54654', 'Special g
 
 1 row inserted.
 
-SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('54642', 'Brad Pitt', 'M', '8772365858');
+SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('54642', 'Robert Redford', 'M', '8772365858');
 
 1 row inserted.
 
-SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('25320', 'Billy bob Thornton', 'M', '6953265885');
+SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('25320', 'Frank Sinatra', 'M', '6953265885');
 
 1 row inserted.
 
-SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('12487', 'Angelina Jolie', 'F', '8547852012');
+SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('12487', 'Brittany Snow', 'F', '8547852012');
 
 1 row inserted.
 
-SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('65895', 'Jennier Aniston', 'F', '2021548569');
+SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('65895', 'Michelle Pfeiffer', 'F', '2021548569');
 
 1 row inserted.
 
-SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('02558', 'Colin Ferrell', 'M', '9658932644');
+SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('02558', 'Richard Dreyfuss', 'M', '9658932644');
 
 1 row inserted.
 
@@ -491,11 +502,23 @@ SQL> INSERT INTO companies (company_id, name, description) VALUES ('520', 'Holly
 
 1 row inserted.
 
-SQL> INSERT INTO companies (company_id, name, description) VALUES ('514', 'Big Motion Pictures', 'Responsible for some of the biggest films of the 20th century.');
+SQL> INSERT INTO companies (company_id, name, description) VALUES ('564', 'UMUC Productions', 'Documentary filmaker students from UMUC.');
+
+1 row inserted. 
+
+SQL> INSERT INTO companies (company_id, name, description) VALUES ('567', 'Freelance Anthem Productions', 'Low budget production responsible for the biggest films of 2017');
 
 1 row inserted.
 
-SQL> INSERT INTO companies (company_id, name, description) VALUES ('560', 'Socal Productions', 'Low budget film makers');
+SQL> INSERT INTO companies (company_id, name, description) VALUES ('520', 'Pixar Animations', 'Responsible for the best animations known to date.');
+
+1 row inserted.
+
+SQL> INSERT INTO companies (company_id, name, description) VALUES ('514', 'AC Moore Pictures', 'Movies from the 30s and 40s');
+
+1 row inserted.
+
+INSERT INTO companies (company_id, name, description) VALUES ('560', 'Big Fat Pictures', 'Partnered with Universal, some of the best CDG Graphics known to the world today.');
 
 1 row inserted.
 
@@ -519,63 +542,62 @@ SQL> INSERT INTO movie_producers (movie_producer_id) VALUES ('86897');
 
 1 row inserted.
 
-SQL> INSERT INTO producers (producer_id, name) VALUES ('02555', 'Big Motion Pictures');
+SQL> INSERT INTO producers (producer_id, name) VALUES ('02555', 'UMUC Productions');
 
 1 row inserted.
 
-SQL> INSERT INTO producers (producer_id, name) VALUES ('02185', 'Hollywood Films');
+SQL> INSERT INTO producers (producer_id, name) VALUES ('02185', 'Freelance Anthem Productions');
 
 1 row inserted.
 
-SQL> INSERT INTO producers (producer_id, name) VALUES ('12474', 'Worldwide Productions');
+SQL> INSERT INTO producers (producer_id, name) VALUES ('12474', 'Pixar Animations');
 
 1 row inserted.
 
-SQL> INSERT INTO producers (producer_id, name) VALUES ('36988', 'Film Mountain');
+SQL> INSERT INTO producers (producer_id, name) VALUES ('36988', 'AC Moore Pictures');
+1 row inserted.
+
+SQL> INSERT INTO producers (producer_id, name) VALUES ('69655', 'Big Fat Pictures');
 
 1 row inserted.
 
-SQL> INSERT INTO producers (producer_id, name) VALUES ('69655', 'SoCal Productions');
+SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('985', 'Blockbuster', 'Baltimore, MD', '4434563313');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('985', 'The Video Store', 'Orlando, FL', '4484434841');
+INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('415', 'DC Video', 'Linthicum, MD', '4103930202');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('415', 'Video Rental World', 'Orlando, FL', '4484430236');
+SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('205', 'Changs Video', 'Columbia, MD', '4109992233');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('205', 'Video Heaven', 'Tallahassee, FL', '9419514345');
+SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('025', 'Michaels Video Hut', 'Laurel,MD', '4101234500');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('025', 'Grab the popcorn', 'Miami, FL', '4484433685');
+SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('524', 'Happy Todds Happy Video Store', 'Towson,MD', '4105003100');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('524', 'Mom and Pop Video Store', 'Pensacola ,FL', '5151561689');
+SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45585285', 'Package', '225', '17.33');
 
 1 row inserted.
 
-SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45585285', 'Package', '225', '70.74');
+SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45552874', 'Package', '138', '58.19');
 
 1 row inserted.
 
-SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45552874', 'Package', '138', '99.42');
+SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45531021', 'Package', '42', '14.99');
 
 1 row inserted.
 
-SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45531021', 'Package', '42', '58.85');
+SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45596124', 'Individual', '1', '70.90');
 
 1 row inserted.
 
-SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45596124', 'Individual', '1', '12.38');
-
-1 row inserted.
-
-SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45541424', 'Package', '256', '70.12');
+SQL> INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45541424', 'Package', '256', '30.45');
 
 1 row inserted.
 
