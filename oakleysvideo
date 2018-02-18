@@ -405,6 +405,11 @@ INSERT INTO movie_copies (copy_id, available) VALUES ('17521', 'N');
 INSERT INTO movie_copies (copy_id, available) VALUES ('14578', 'Y');
 INSERT INTO movie_copies (copy_id, available) VALUES ('18735', 'N');
 
+SELECT * FROM 'customers' WHERE 'customers_id' = 1;
+UPDATE 'customers' SET 'customers_id' = '44490' WHERE 'customers_id' = 1;
+DELETE FROM 'customers' [WHERE 'customers_id' = 1];
+
+
 SPOOL OFF
 
 
