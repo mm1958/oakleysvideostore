@@ -304,8 +304,8 @@ remark inserts data into tables
 INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('20325', 'The Mummy', 'action', 'An ancient Egyptian princess is awakened from her crypt beneath the desert, bringing with her malevolence grown over millennia, and terrors that defy human comprehension.', '13-NOV-2017');
 INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('67676', 'Matilda', 'drama', 'an exceptionally clever little girl, Matilda Wormwood, who has exceptionally horrible and ignorant parents. ', '28-JUL-1996');
 INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('87355', 'Hocus Pocus', 'drama', 'After three centuries, three witch sisters are resurrected in Salem, Massachusetts on Halloween night,', '16-JUL-1993');
-INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53202', 'Christmas Vacation', 'adventure', 'A family decides to travel for Christmas and things go hilariously wrong', '04-FEB-1985');
-INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53235', 'A Christmas Story', 'drama', 'All a boy wants for Christmas is a Red Ryder BB gun', '04-SEP-1941');
+INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53202', 'Jurassic Park', 'adventure', 'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.', '11-JUN-1993');
+INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53235', 'Forrest Gump', 'drama', 'The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.', '06-JUL-1994');
 
 
 INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45457', '2');
@@ -357,23 +357,23 @@ INSERT INTO movie_distributors (distributor_id, company_name, location, contact)
 INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('025', 'Michaels Video Hut', 'Laurel,MD', '4101234500');
 INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('524', 'Happy Todds Happy Video Store', 'Towson,MD', '4105003100');
 
-INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45585285', 'Package', '225', '70.74');
-INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45552874', 'Package', '138', '99.42');
-INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45531021', 'Package', '42', '58.85');
-INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45596124', 'Individual', '1', '12.38');
-INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45541424', 'Package', '256', '70.12');
+INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45585285', 'Package', '225', '17.33');
+INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45552874', 'Package', '138', '58.19');
+INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45531021', 'Package', '42', '14.99');
+INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45596124', 'Individual', '1', '70.90');
+INSERT INTO distributed_movie_list (distribution_id, distribute_type, inventory_amount, unit_price) VALUES ('45541424', 'Package', '256', '30.45');
 
-INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45644513', '3', '06.24', '00.24', 'Complete', '01-OCT-2016', '02-OCT-2016');
-INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45643699', '2', '04.16', '00.16', 'Complete', '12-JUN-2016', '13-JUN-2016');
-INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45640202', '1', '02.08', '00.08', 'Complete', '23-AUG-2016', '25-AUG-2016');
+INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45644513', '3', '05.77', '00.24', 'Complete', '01-OCT-2016', '02-OCT-2016');
+INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45643699', '2', '05.88', '00.16', 'Complete', '12-JUN-2016', '13-JUN-2016');
+INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45640202', '1', '04.99', '00.08', 'Complete', '23-AUG-2016', '25-AUG-2016');
 INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45643025', '3', '06.24', '00.24', 'Complete', '21-MAY-2016', '21-MAY-2016');
-INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45641505', '1', '02.08', '00.08', 'Complete', '18-JUN-2016', '19-JUN-2016');
+INSERT INTO orders (order_id, total_items, total_payment, tax, order_status, ordering_date, order_completed_date) VALUES ('45641505', '1', '03.99', '00.08', 'Complete', '18-JUN-2016', '19-JUN-2016');
 
-INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265854587', '100', '2.00', '200.00');
-INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265530258', '12', '2.00', '24.00');
-INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265852620', '48', '2.00', '96.00');
-INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265024515', '16', '2.00', '30.00');
-INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265027466', '80', '2.00', '160.00');
+INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265854587', '100', '4.00', '400.00');
+INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265530258', '12', '4.00', '48.00');
+INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265852620', '48', '4.00', '192.00');
+INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265024515', '16', '4.00', '64.00');
+INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265027466', '80', '4.00', '320.00');
 
 INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9895', 'Baltimore', 'Blockbuster');
 INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9364', 'Linthicum', 'DC Video');
@@ -381,11 +381,11 @@ INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9445', 'Colu
 INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9877', 'Laurel', 'Michaels Video Hut');
 INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9120', 'Towson', 'Happy Todds Happy Video Store');
 
-INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45876', 'George', 'Edwards', 'M', '112 Elm st', 'Orlando', 'FL', '34554', '8439543855', '5441358468943165', 'Y', '01-JUN-2016', 'Y', '5');
-INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45216', 'Brittany', 'Ryan', 'F', '185 Dorchester rd', 'Orlando', 'FL', '34554', '8439536455', '5441358468323569', 'Y', '08-MAR-2016', 'Y', '3');
-INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('43626', 'Rose', 'Smith', 'F', '1992 Round tree dr', 'Tallahassee', 'FL', '35785', '8439142355', '5441358468632144', 'Y', '07-AUG-2016', 'N', '5');
-INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('48874', 'Ed', 'Washington', 'M', '655 Western drive', 'Tallahassee', 'FL', '35785', '8439585723', '5441358468215784', 'Y', '10-OCT-2016', 'Y', '3');
-INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45334', 'Adam', 'Knight', 'M', '323 Oak blvd', 'Orlando', 'FL', '34554', '8439865746', '5441358468936266', 'Y', '11-JAN-2016', 'Y', '5');
+INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45876', 'Meredith', 'Bartley', 'F', '4400 Massachusetts Ave', 'Washington', 'DC', '20774', '8439543855', '5441358468943165', 'Y', '02-OCT-2015', 'Y', '5');
+INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45216', 'Michael', 'Andreas', 'M', '812 Oregon Ave', 'Baltimore', 'MD', '21234', '8439536455', '5441358468323569', 'Y', '05-MAY-2017', 'Y', '3');
+INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('43626', 'Tayler', 'Jacoby', 'M', '1613 Aberdeen Road', 'Towson', 'MD', '21286', '8439142355', '5441358468632144', 'Y', '13-SEP-2015', 'N', '5');
+INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('48874', 'Margaret', 'Odofe', 'F', '11718 Janney Court', 'Clarksville', 'MD', '21029', '8439585723', '5441358468215784', 'Y', '11-NOV-2015', 'Y', '3');
+INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45334', 'Norma', 'McAdam', 'F', '6806 N Charles St', 'Baltimore', 'MD', '21284', '8439865746', '5441358468936266', 'Y', '20-JUL-2015', 'Y', '5');
 
 INSERT INTO movie_renting_list (title_id, number_in_store, available_for_rent, rent_unit_price, type_distributed, overdue_unit_fee) VALUES ('54646', '12', 'Y', '3.99', 'VIDEO/DVD', '3.00');
 INSERT INTO movie_renting_list (title_id, number_in_store, available_for_rent, rent_unit_price, type_distributed, overdue_unit_fee) VALUES ('54252', '18', 'Y', '3.99', 'VIDEO/DVD', '3.00');
