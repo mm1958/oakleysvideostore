@@ -66,13 +66,14 @@ SQL> DROP TABLE movie_copies CASCADE CONSTRAINTS;
 
 Table MOVIE_COPIES dropped.
 
-SQL> remark Creates Tables
+SQL> remark creates table
 SQL> CREATE TABLE movie_copies
 (
 	copy_id number(5),
 	title_id number(5),
 	available char(1) NOT NULL,
 	PRIMARY KEY (copy_id)
+ 
  
   );
 
@@ -90,6 +91,7 @@ overdue_fee	NUMBER(5,2) NOT NULL,
 overdue_days	NUMBER(5) NOT NULL,	
 PRIMARY KEY(rent_record_id)
 
+
 );
 
 Table MOVIE_RENT_RECORDS created.
@@ -104,6 +106,7 @@ rent_unit_price		NUMBER(5,2) NOT NULL,
 type_distributed	VARCHAR2(10) NOT NULL,
 overdue_unit_fee	NUMBER(5,2) NOT NULL,
 CONSTRAINT movie_renting_list_pk PRIMARY KEY(title_id)
+
 
 );
 
@@ -138,6 +141,7 @@ location	VARCHAR2(50),
 name		VARCHAR2(30) NOT NULL,
 CONSTRAINT movie_rental_stores_pk PRIMARY KEY(store_id)
 
+
 );
 
 Table MOVIE_RENTAL_STORES created.
@@ -150,6 +154,7 @@ number_of_items		NUMBER(3) NOT NULL,
 item_unit_price		NUMBER(5) NOT NULL,	
 item_sub_total		NUMBER(10) NOT NULL,		
 CONSTRAINT order_items_pk PRIMARY KEY(item_id)
+
 
 );
 
@@ -192,6 +197,7 @@ location		VARCHAR2(30),
 contact			VARCHAR2(10) NOT NULL,
 CONSTRAINT movie_distributors_pk PRIMARY KEY(distributor_id)
 
+
 );
 
 Table MOVIE_DISTRIBUTORS created.
@@ -212,6 +218,7 @@ movie_producer_id	NUMBER(5),
 movie_id		NUMBER(5),
 producer_id	NUMBER(5),
 CONSTRAINT movie_producers_pk PRIMARY KEY(movie_producer_id)
+
 
 );
 
@@ -398,18 +405,6 @@ SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VA
 
 1 row inserted.
 
-SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('87355', 'The Wizard of Oz', 'adventure', 'A sheltered woman ventures through Oz to get help finding her way back to Kansas', '02-JAN-1939');
-
-1 row inserted.
-
-SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53202', 'Christmas Vacation', 'adventure', 'A family decides to travel for Christmas and things go hilariously wrong', '04-FEB-1985');
-
-1 row inserted.
-
-SQL> INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53235', 'A Christmas Story', 'drama', 'All a boy wants for Christmas is a Red Ryder BB gun', '04-SEP-1941');
-
-1 row inserted.
-
 SQL> INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45457', '2');
 
 1 row inserted.
@@ -490,18 +485,6 @@ SQL> INSERT INTO actors (actor_id, name, gender, contact) VALUES ('02558', 'Rich
 
 1 row inserted.
 
-SQL> INSERT INTO companies (company_id, name, description) VALUES ('564', 'Hollywood Films', 'The oldest running film production company in the world.');
-
-1 row inserted.
-
-SQL> INSERT INTO companies (company_id, name, description) VALUES ('567', 'Film Mountain', 'Hard hitting newcomer with quality films.');
-
-1 row inserted.
-
-SQL> INSERT INTO companies (company_id, name, description) VALUES ('520', 'Hollywood Films', 'The oldest running film production company in the world.');
-
-1 row inserted.
-
 SQL> INSERT INTO companies (company_id, name, description) VALUES ('564', 'UMUC Productions', 'Documentary filmaker students from UMUC.');
 
 1 row inserted. 
@@ -518,7 +501,7 @@ SQL> INSERT INTO companies (company_id, name, description) VALUES ('514', 'AC Mo
 
 1 row inserted.
 
-INSERT INTO companies (company_id, name, description) VALUES ('560', 'Big Fat Pictures', 'Partnered with Universal, some of the best CDG Graphics known to the world today.');
+SQL> INSERT INTO companies (company_id, name, description) VALUES ('560', 'Big Fat Pictures', 'Partnered with Universal, some of the best CDG Graphics known to the world today.');
 
 1 row inserted.
 
@@ -621,63 +604,43 @@ SQL> INSERT INTO orders (order_id, total_items, total_payment, tax, order_status
 
 1 row inserted.
 
-SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265854587', '100', '2.00', '200.00');
+SQL>INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265854587', '100', '4.00', '400.00');
 
 1 row inserted.
 
-SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265530258', '12', '2.00', '24.00');
+SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265530258', '12', '4.00', '48.00');
 
 1 row inserted.
 
-SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265852620', '48', '2.00', '96.00');
+SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265852620', '48', '4.00', '192.00');
 
 1 row inserted.
 
-SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265024515', '16', '2.00', '30.00');
+SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265024515', '16', '4.00', '64.00');
 
 1 row inserted.
 
-SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265027466', '80', '2.00', '160.00');
+SQL> INSERT INTO order_items (item_id, number_of_items, item_unit_price, item_sub_total) VALUES ('3265027466', '80', '4.00', '320.00');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9895', 'Orlando', 'Bob Video Store');
+SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9895', 'Baltimore', 'Blockbuster');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9364', 'Jacksonville', 'We Have It All Video Store');
+SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9364', 'Linthicum', 'DC Video');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9445', 'Orlando', 'Tom and Nancy Video Store');
+SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9445', 'Columbia', 'Changs Video');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9877', 'Miami', 'The Super Video Store');
+SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9877', 'Laurel', 'Michaels Video Hut');
 
 1 row inserted.
 
-SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9120', 'Tallahassee', 'The Big Video Store');
-
-1 row inserted.
-
-SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45876', 'George', 'Edwards', 'M', '112 Elm st', 'Orlando', 'FL', '34554', '8439543855', '5441358468943165', 'Y', '01-JUN-2016', 'Y', '5');
-
-1 row inserted.
-
-SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45216', 'Brittany', 'Ryan', 'F', '185 Dorchester rd', 'Orlando', 'FL', '34554', '8439536455', '5441358468323569', 'Y', '08-MAR-2016', 'Y', '3');
-
-1 row inserted.
-
-SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('43626', 'Rose', 'Smith', 'F', '1992 Round tree dr', 'Tallahassee', 'FL', '35785', '8439142355', '5441358468632144', 'Y', '07-AUG-2016', 'N', '5');
-
-1 row inserted.
-
-SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('48874', 'Ed', 'Washington', 'M', '655 Western drive', 'Tallahassee', 'FL', '35785', '8439585723', '5441358468215784', 'Y', '10-OCT-2016', 'Y', '3');
-
-1 row inserted.
-
-SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45334', 'Adam', 'Knight', 'M', '323 Oak blvd', 'Orlando', 'FL', '34554', '8439865746', '5441358468936266', 'Y', '11-JAN-2016', 'Y', '5');
+SQL> INSERT INTO movie_rental_stores (store_id, location, name) VALUES ('9120', 'Towson', 'Happy Todds Happy Video Store');
 
 1 row inserted.
 
@@ -692,6 +655,26 @@ SQL> INSERT INTO movie_renting_list (title_id, number_in_store, available_for_re
 SQL> INSERT INTO movie_renting_list (title_id, number_in_store, available_for_rent, rent_unit_price, type_distributed, overdue_unit_fee) VALUES ('54725', '12', 'Y', '3.99', 'VIDEO/DVD', '3.00');
 
 1 row inserted.
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45876', 'Meredith', 'Bartley', 'F', '4400 Massachusetts Ave', 'Washington', 'DC', '20774', '8439543855', '5441358468943165', 'Y', '02-OCT-2015', 'Y', '5');
+
+1 row inserted. 
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45216', 'Michael', 'Andreas', 'M', '812 Oregon Ave', 'Baltimore', 'MD', '21234', '8439536455', '5441358468323569', 'Y', '05-MAY-2017', 'Y', '3');
+
+1 row inserted. 
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('43626', 'Tayler', 'Jacoby', 'M', '1613 Aberdeen Road', 'Towson', 'MD', '21286', '8439142355', '5441358468632144', 'Y', '13-SEP-2015', 'N', '5');
+
+1 row inserted. 
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('48874', 'Margaret', 'Odofe', 'F', '11718 Janney Court', 'Clarksville', 'MD', '21029', '8439585723', '5441358468215784', 'Y', '11-NOV-2015', 'Y', '3');
+
+1 row inserted. 
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, gender, street, city, state, zip, phone_number, card_number, card_approved, approved_date, overdue_notified, rent_limit) VALUES ('45334', 'Norma', 'McAdam', 'F', '6806 N Charles St', 'Baltimore', 'MD', '21284', '8439865746', '5441358468936266', 'Y', '20-JUL-2015', 'Y', '5');
+
+1 row inserted. 
 
 SQL> INSERT INTO movie_renting_list (title_id, number_in_store, available_for_rent, rent_unit_price, type_distributed, overdue_unit_fee) VALUES ('57527', '18', 'Y', '3.99', 'VIDEO/DVD', '3.00');
 
@@ -740,5 +723,17 @@ SQL> INSERT INTO movie_copies (copy_id, available) VALUES ('14578', 'Y');
 SQL> INSERT INTO movie_copies (copy_id, available) VALUES ('18735', 'N');
 
 1 row inserted.
+
+SQL> SELECT * FROM 'customers' WHERE 'customers_id' = 2;
+
+1 row inserted. 
+
+SQL> UPDATE 'customers' SET 'customers_id' = '44490' WHERE 'customers_id' = 2;
+
+1 row inserted. 
+
+SQL> DELETE FROM 'customers' [WHERE 'customers_id' = 1];
+
+1 row inserted. 
 
 SQL> SPOOL OFF
