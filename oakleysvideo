@@ -23,7 +23,7 @@ DROP TABLE movie_copies CASCADE CONSTRAINTS;
 
 
 
-remark Creates Tables
+remark creates tables
 
 CREATE TABLE movie_copies
 (
@@ -410,6 +410,6 @@ UPDATE 'customers' SET 'customers_id' = '44490' WHERE 'customers_id' = 1;
 DELETE FROM 'customers' [WHERE 'customers_id' = 1];
 
 
-SPOOL OFF
+SPOOL OFF;
 
 
